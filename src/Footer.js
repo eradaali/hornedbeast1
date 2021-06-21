@@ -4,7 +4,7 @@ import React, { Component } from 'react'
     render() {
         return (
             <div>
-               <span>Erada ali</span> 
+               <span>Erada ali &copy;2021</span> 
             </div>
         )
     }
