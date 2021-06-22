@@ -14,6 +14,12 @@ class Hornedbeasts extends Component {
                 galary: this.state.galary + 1
             })
     }
+    disLike = () => {
+        this.setState(
+            {
+                galary: this.state.galary - 1
+            })
+    }
     render() {
         return (
             <div>
@@ -28,6 +34,7 @@ class Hornedbeasts extends Component {
                             <Card.Text>{this.props.keyword}</Card.Text>
                             <Card.Text>{this.state.galary}</Card.Text>
                             <Button variant="primary" onClick={this.react}>❤️</Button>
+                            <Button variant="primary" onClick={this.disLike}>💔</Button>
                         </Card.Body>
                     </Card>
 
