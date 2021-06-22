@@ -2,44 +2,43 @@
 import React, { Component } from 'react'
 import Hornedbeasts from './Hornedbeasts'
 import hornsData from './hornsData'
-import React from 'react';
-import { Button } from 'reactstrap';
+// import { Button } from 'reactstrap';
 class Main extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            galary: 0
-        }
-    }
-    react = () => {
-        this.setState(
-            {
-                galary: this.state.galary + 1
-            })
-    }
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         galary: 0
+    //     }
+    // }
+
     // const printImages=()
     render() {
-        console.log(typeof this.state.galary);
-        console.log(this.state)
+        // console.log(typeof this.state.galary);
+        // console.log(this.state)
         return (
-            <div>
-                {
-                    hornsData.map((item) => {
-                        return <div>
-                            <p>{item.title}</p>
-                            <p>{item.description}</p>
-                            <p>{item.keyword}</p>
-                            <p>{item.horns}</p>
-                            <img src={item.image_url} style={{ width: 300 }} />
-                            <h1>{this.state.galary}</h1>
-                            <button onClick={this.react} style={{ borderRadius: 8 }}>React</button>
-                        </div>
-                    })
-                }
-                <hornsData />
-                <Hornedbeasts/>
-                <Button/>
-            </div >
+            hornsData.map(i => {
+
+                return (
+                    <div>
+                        {/* <hornsData /> */}
+                        {/* <h1>{this.props.title}</h1>
+                <p>{this.props.description}</p>
+                <h2>{this.props.keyword}</h2>
+                <h3>{this.props.horns}</h3> */}
+                        {/* <img src={this.props.image_url} style={{width: 250}} /> */}
+                        {/* <button onClick={this.react}></button> */}
+
+                        <Hornedbeasts
+                            imgVarible={i.image_url}
+                            title={i.title}
+                            description={i.description}
+                            horns={i.horns} 
+                            keyword={i.keyword}
+
+                        />
+
+                    </div >
+             ) })
         )
     }
 }
