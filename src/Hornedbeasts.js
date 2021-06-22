@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import hornsData from './hornsData'
- class Hornedbeasts extends Component {
+import { Card, Button, Col } from 'react-bootstrap';
+class Hornedbeasts extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -16,20 +17,26 @@ import hornsData from './hornsData'
     render() {
         return (
             <div>
-           
-                   
-                   <p>{this.props.title}</p>
-                   <p>{this.props.description}</p>
-                   <p>{this.props.keyword}</p>
-                   <p>{this.props.horns}</p>
-                   <img src={this.props.imgVarible} style={{ width: 300 }} />
-                   <h1>{this.state.galary}</h1>
-                   <button onClick={this.react} style={{ borderRadius: 8 }}>React</button>
-        
-             
-            
+                <Col sm ={5}>
+                    <Card style={{ width: '18rem' }}
+                        bg='dark'
+                        text='white'>
+                        <Card.Img variant="top" src={this.props.imgVarible} />
+                        <Card.Body>
+                            <Card.Title>{this.props.title}</Card.Title>
+                            <Card.Text>{this.props.description}</Card.Text>
+                            <Card.Text>{this.props.keyword}</Card.Text>
+                            <Card.Text>{this.state.galary}</Card.Text>
+                            <Button variant="primary" onClick={this.react}>❤️</Button>
+                        </Card.Body>
+                    </Card>
 
+
+
+
+                </Col>
             </div>
+
         )
     }
 }
