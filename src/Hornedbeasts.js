@@ -22,7 +22,9 @@ class Hornedbeasts extends Component {
     }
     render() {
         return (
+            
             <div>
+                 
                 <Col sm ={5}>
                     <Card style={{ width: '18rem' }}
                         bg='dark'
@@ -37,10 +39,6 @@ class Hornedbeasts extends Component {
                             <Button variant="primary" onClick={this.disLike}>💔</Button>
                         </Card.Body>
                     </Card>
-
-
-
-
                 </Col>
             </div>
 
