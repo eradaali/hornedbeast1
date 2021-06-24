@@ -26,6 +26,7 @@ class Hornedbeasts extends Component {
     render() {
         return (
 
+
 <>
             <Modal show={this.state.show} onHide={()=>this.handelmodal()}>
             <Modal.Header closeButton></Modal.Header>
