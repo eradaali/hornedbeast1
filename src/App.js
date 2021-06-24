@@ -13,7 +13,7 @@ export class App extends React.Component {
        <ModelHornedbeats/>
         <Header />
         <Container>
-        <Main />
+        <Main  />
         </Container>
         <Footer />
         

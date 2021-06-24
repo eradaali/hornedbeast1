@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import hornsData from './hornsData'
-import { Card, Button, Col } from 'react-bootstrap';
+import { Card, Button, Col,Modal } from 'react-bootstrap';
 class Hornedbeasts extends Component {
     constructor(props) {
         super(props);
@@ -20,8 +20,22 @@ class Hornedbeasts extends Component {
                 galary: this.state.galary - 1
             })
     }
+    handelmodal(){
+        this.setState({show:!this.state.show})
+    }
     render() {
         return (
+
+<>
+            <Modal show={this.state.show} onHide={()=>this.handelmodal()}>
+            <Modal.Header closeButton></Modal.Header>
+            <Modal.Body>{this.props.title}</Modal.Body>
+            <Modal.Body><Card.Img  onClick={()=>{this.handelmodal()}} variant="top" src={this.props.imgVarible} /></Modal.Body>
+            <Modal.Body>{this.props.description}</Modal.Body>
+            <Modal.Body>{this.props.keyword}</Modal.Body>
+            <Modal.Body>{this.state.galary}</Modal.Body>
+            <Modal.Footer><Button onClick={()=>{this.handelmodal()}}>close Modal</Button></Modal.Footer>
+        </Modal>
             
             <div>
                  
@@ -29,7 +43,7 @@ class Hornedbeasts extends Component {
                     <Card style={{ width: '18rem' }}
                         bg='dark'
                         text='white'>
-                        <Card.Img variant="top" src={this.props.imgVarible} />
+                        <Card.Img  onClick={()=>{this.handelmodal()}} variant="top" src={this.props.imgVarible} />
                         <Card.Body>
                             <Card.Title>{this.props.title}</Card.Title>
                             <Card.Text>{this.props.description}</Card.Text>
@@ -41,7 +55,7 @@ class Hornedbeasts extends Component {
                     </Card>
                 </Col>
             </div>
-
+</>
         )
     }
 }
