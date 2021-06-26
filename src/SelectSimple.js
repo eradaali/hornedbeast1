@@ -14,7 +14,7 @@ class SelectSimple extends Component {
 //     console.log(this.myRef.current.value);
 // }
 handelmodal(){
-    debugger
+    // debugger
    this.props.handleCallback(this.state)
     
 }
@@ -36,7 +36,7 @@ handelmodal(){
           <option value="100">100</option>
           
         </Form.Control>
-        <Button onClick={()=>{this.handelmodal(this.myRef.mySelect)}} type="submit">Submit form</Button>
+        <Button onClick={()=>{this.handelmodal()}} type="submit">Submit form</Button>
       </div>
     );
   }

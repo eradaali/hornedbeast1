@@ -34,17 +34,7 @@ class Main extends Component {
                            
 
                         />
-                        // : <Hornedbeasts
-                        //     imgVarible={i.image_url}
-                        //     title={i.title}
-                        //     description={i.description}
-                        //     horns={i.horns&&this.state==i.horns} 
-                        //     keyword={i.keyword}
-                        //     handleCallback={this.handleCallback}
 
-                        
-
-                        // />
                         
 
                  
