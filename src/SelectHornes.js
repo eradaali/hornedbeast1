@@ -5,9 +5,8 @@ import hornsData from './hornsData'
         return (
             <div className="Container m-2,p-4">
 
-               <select className="Custom_select" onChange={(e)}=>{
-                let count=selectHorens.   
-               }}>
+               <select >
+                   
                    <option  value="1">1</option>
                    <option value="2">2</option>
                    <option value="3">3</option>

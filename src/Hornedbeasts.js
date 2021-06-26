@@ -21,6 +21,7 @@ class Hornedbeasts extends Component {
             })
     }
     handelmodal(){
+        debugger
         this.setState({show:!this.state.show})
     }
     render() {
