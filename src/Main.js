@@ -33,11 +33,7 @@ class Main extends Component {
                             keyword={i.keyword}
                            
 
-                        />
-
-                        
-
-                 
+                        /> 
              ) }) }
              </Row > )
         
